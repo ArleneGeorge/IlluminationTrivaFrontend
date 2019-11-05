@@ -7,12 +7,12 @@ import Question from './Question'
 function Questions(props){
     const $questions = props.questions.map(question => {
         console.log(question)
-        return (<Question 
+        return <Question 
             category={question.category} 
             type={question.question_type} 
             difficulty={question.difficulty} 
             question={question.question} 
-            answer={question.correct_answer} />)
+            answer={question.correct_answer} />
     })
     return(
         <div className="question-container">
@@ -22,5 +22,6 @@ function Questions(props){
         </div>
     )
 }
+
 
 export default Questions
