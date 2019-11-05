@@ -5,20 +5,22 @@ import Questions from './Components/Questions'
 class App extends Component {
 
   state = {
-    questions: []
+    questions: [],
+    isAnswerShowing: false,
   }
-
-
-
-
 
   componentDidMount(){
     fetch('http://localhost:3000/questions')
     .then(response => response.json())
     .then(questions => {
       this.setState ({questions})
-  } )
-    
+  } )  
+  }
+
+  toggleAnswerShowing = () => {
+    this.setState({
+      isAnswerShowing: !this.state.isAddNewBagelShowing
+    })
   }
 
   render (){
