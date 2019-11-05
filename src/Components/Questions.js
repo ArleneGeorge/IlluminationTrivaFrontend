@@ -1,4 +1,6 @@
 import React from 'react'
+import './Questions.css'
+
 
 import Question from './Question'
 
@@ -13,9 +15,11 @@ function Questions(props){
             answer={question.correct_answer} />
     })
     return(
+        <div className="question-container">
         <ul>
             {$questions}
         </ul>
+        </div>
     )
 }
 
