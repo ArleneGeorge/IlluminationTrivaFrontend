@@ -1,8 +1,8 @@
 import React from 'react'
-
+import './Question.css'
 export default function Question(props){
     return (
-        <div>
+        <div className="single-question">
         <h2>{props.question}</h2>
         <p> {props.category} </p>
         <p> {props.difficulty} </p>

@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h3 {
+  border-color: green;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 20px;
+  background-color: lightgray;
+  color: green;
+  font-weight: bolder;
+  font-size: larger;
+  padding: 10px;
+}
+

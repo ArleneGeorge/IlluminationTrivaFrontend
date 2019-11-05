@@ -1,0 +1,15 @@
+.single-question{
+    margin-bottom: 70px;
+    width: 85%;
+    border: solid;
+    border-color: lime;
+    padding: 50px;
+}
+
+h2 {
+    font-family: sans-serif;
+}
+
+div {
+    text-align: center;
+}
