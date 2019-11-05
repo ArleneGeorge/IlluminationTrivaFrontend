@@ -1,6 +1,10 @@
 .question-container{
     display: flex;
     justify-content: space-evenly;
-
+    
 }
 
+img{
+    border-radius: 15px;
+    border: outset;
+}

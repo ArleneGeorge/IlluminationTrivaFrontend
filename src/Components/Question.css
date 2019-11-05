@@ -1,9 +1,10 @@
 .single-question{
     margin-bottom: 70px;
     width: 85%;
-    border: solid;
+    border: outset;
     border-color: lime;
     padding: 50px;
+    border-radius: 15px
 }
 
 h2 {

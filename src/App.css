@@ -2,9 +2,34 @@
 
 body {
   font-family: 'McLaren', cursive;
+  
 }
 
 h1 {
   text-align: center;
   font-family: fantasy;
+  font-size: 50px;
+  color: rgb(30, 106, 219);
+}
+
+input{
+  padding: 10px;
+  background-color: rgb(30, 106, 219);
+  color: white;
+  font-size: 15px;
+  width: 25%;
+  font-weight: bold; 
+  border-radius: 15px;
+  border: outset;
+  cursor: pointer;
+}
+
+
+
+.search-bar{
+  background-color: white;
+  color: black;
+  width: 60%;
+  font-size: 20px;
+
 }

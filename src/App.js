@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import './App.css';
 import Questions from './Components/Questions'
+import FilterBox from './Components/FilterBox'
 
 class App extends Component {
 
   state = {
     questions: [],
-    isAnswerShowing: false,
+    searchTerm: "",
   }
 
   componentDidMount(){
@@ -17,11 +18,25 @@ class App extends Component {
   } )  
   }
 
-  toggleAnswerShowing = () => {
+  filteredQuestions = () => this.state.questions
+  .filter(question => question.difficulty && question.category)
+  .filter(question => {
+    return (question.difficulty 
+    .toLowerCase()
+    .includes(this.state.searchTerm.toLowerCase())
+    ) || (question.category 
+      .toLowerCase()
+      .includes(this.state.searchTerm.toLowerCase())
+      )
+  })
+
+  updateSearchTerm = event => {
     this.setState({
-      isAnswerShowing: !this.state.isAddNewBagelShowing
+      searchTerm: event.target.value,
     })
   }
+
+ 
 
   render (){
   return (
@@ -30,8 +45,12 @@ class App extends Component {
         <h1>Illumination Trivia</h1>
       </header>
       <section className="points">
+      <FilterBox
+            searchTerm={this.state.searchTerm}
+            updateSearchTerm={this.updateSearchTerm}
+          />
         <ul>
-        <Questions questions={this.state.questions}/>
+        <Questions questions={this.filteredQuestions()}/>
         </ul>
       </section>
 
